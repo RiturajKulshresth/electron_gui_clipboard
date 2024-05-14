@@ -1,0 +1,15 @@
+{
+  "name": "gui",
+  "version": "1.0.0",
+  "description": "qui for clip",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "me",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^30.0.4"
+  }
+}

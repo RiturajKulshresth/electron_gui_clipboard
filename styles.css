@@ -1,0 +1,64 @@
+body {
+    background-color: #153448; /* Set background color of the entire window */
+    font-family: "Roboto", sans-serif; /* Set font to Roboto */
+}
+
+.json-box {
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Add border with faded color */
+    padding: 10px; /* Add padding */
+    margin-bottom: 10px; /* Add margin to separate boxes */
+    height: 100px; /* Fixed height */
+    overflow: hidden; /* Hide overflowing content */
+    position: relative; /* Required for gradient overlay */
+    background-color: #3c5b6f; /* Set box background color */
+    color: #dfd0b8; /* Set text color */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 12px; /* Set font size */
+}
+
+.json-box:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 95%;
+    height: 30px; /* Gradient height */
+    background: linear-gradient(
+        to bottom,
+        rgba(60, 91, 111, 0),
+        rgba(60, 91, 111, 1)
+    ); /* Fade effect */
+    pointer-events: none; /* Prevent clicking on gradient */
+    border-radius: 0 0 5px 5px; /* Add rounded corners to the gradient */
+}
+
+.json-box-container {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 5px; /* Add rounded corners to the container */
+    overflow: hidden; /* Hide scrollbar */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.json-box-container:hover {
+    transform: scale(1.03);
+}
+
+.animated {
+    animation: pulse 1s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
